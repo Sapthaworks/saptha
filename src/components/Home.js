@@ -6,7 +6,7 @@ const Home = () => {
 
         {/* Hero Section */}
         <section id='logosection'>
-          <img src="./images/SAPTHA.ico" alt="saptha" /> 
+          <img src={`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`} alt="saptha" /> 
         </section>
         <section>
           <h1>Crafting Spaces That Feel Like Home</h1>
@@ -63,13 +63,13 @@ const Home = () => {
             <h2>Our Projects</h2>
             <div className="album">
                 <div className="projects">
-                <video src="./videos/project1.mp4" controls></video>
+                <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
                 </div>
                 <div className="projects">
-                <video src="./videos/project1.mp4" controls></video>
+                <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
                 </div>
                 <div className="projects">
-                <video src="./videos/project1.mp4" controls></video>
+                <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
                 </div>
             </div>
         </section>

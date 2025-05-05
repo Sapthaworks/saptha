@@ -22,7 +22,7 @@ const [activeTab, setActiveTab] = useState('home');
     <>
       <header>
       <div id='heading'>
-        <img id="logo" src="./images/saptha.ico" alt="saptha logo" />
+        <img id="logo" src={`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`} alt="saptha logo" />
         <div className='title'>Saptha Interiors</div>
       </div>
 
