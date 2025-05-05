@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  max-height: 100vh;
+  background-image: url('./images/bg2.png'); /* Default for desktop */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Mobile styles for width 500px or less */
+@media (max-width: 500px) {
+  body{
+    background-image: url('./images/bg.png'); /* Mobile image */
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

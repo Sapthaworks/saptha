@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+}
+header {
+  height: 12vh;
+  background-color: rgb(15, 14, 14);
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#heading{
+  display: flex;
+  align-items: center;
+}
+#logo{
+  width: 40px;
+}
+.title{
+  color: white;
+  font-family: 'cursive';
+  font-size: 35px;
+}
+.navigators{
+  height: 7vh;
+  background-color: rgb(15, 14, 14);
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navfield {
+  display: flex;
+  background-color: rgb(19, 19, 20);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  color: white;
+  width: 20%;
+}
+
+.navfield:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+#logosection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matter{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.matter>p{
+  margin: 0.5%;
+}
+
+.components{
+  background: rgba(193, 212, 216, 0.55);
+  color: rgb(20, 4, 65);
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+}
+section {
+  margin-bottom: 4vh;
+}
+
+h1, h2 {
+  color: #240e68;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1vh;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+}
+
+ul {
+  padding-left: 2rem;
+  margin-bottom: 2vh;
+}
+
+ul li {
+  margin-bottom: 1vh;
+  line-height: 1.6;
+}
+
+strong {
+  color: #050505;
+}
+
+.album{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* height: 500px; */
+}
+
+.projects{
+  background-color: black;
+  height: 300px;
+  width: 300px;  
+  margin: 10px;
+}
+video {
+  z-index: 0 !important;
+}
+
+video{
+  width: 300px;
+  height:300px;
+}
+
+@media (max-width: 499px) {
+  .matter{
+    font-size: 15px;
+  }
+  .matter>p{
+    margin: 2.5%;
+  }
+  .album{
+    flex-direction: column;
+  }
+}
