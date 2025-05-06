@@ -17,12 +17,33 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can integrate with an API or email service here
-    alert("Your message has been sent!");
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const response = await fetch('https://saptha-backend.onrender.com/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await response.json();
+  
+      if (response.ok) {
+        alert('✅ Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        alert('❌ Failed to send message. Please try again.');
+        console.error(result);
+      }
+    } catch (error) {
+      alert('❌ Server error. Please try again later.');
+      console.error(error);
+    }
   };
+  
+  
 
   return (
     <div className="contact-container">
