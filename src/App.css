@@ -144,3 +144,10 @@ video{
     flex-direction: column;
   }
 }
+footer{
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 30px;
+}
