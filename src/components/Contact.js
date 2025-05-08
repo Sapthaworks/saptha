@@ -29,7 +29,6 @@ const Contact = () => {
       });
   
       const result = await response.json();
-  
       if (response.ok) {
         alert('✅ Message sent successfully!');
         setFormData({ name: '', email: '', subject: '', message: '' });
