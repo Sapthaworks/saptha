@@ -8,11 +8,6 @@
     "icons": [
       {
         "src": "SAPTHA.ico",
-        "type": "image/x-icon",
-        "sizes": "48x48"
-      },
-      {
-        "src": "SAPTHA.ico",
         "type": "image/png",
         "sizes": "192x192"
       },
