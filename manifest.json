@@ -7,13 +7,18 @@
     "lang": "en-US",
     "icons": [
       {
-        "src": "SAPTHA.ico",
-        "type": "image/png",
+        "src": "{`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`}",
+        "type": "image/ico",
         "sizes": "192x192"
       },
       {
-        "src": "SAPTHA.ico",
-        "type": "image/png",
+        "src": "{`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`}",
+        "type": "image/ico",
+        "sizes": "48x48"
+      },
+      {
+        "src": "{`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`}",
+        "type": "image/ico",
         "sizes": "512x512"
       }
     ]
