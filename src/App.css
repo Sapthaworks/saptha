@@ -1,29 +1,42 @@
+/* Global App Styling */
 .App {
   text-align: center;
 }
+
+/* HEADER */
 header {
   height: 12vh;
   background-color: rgb(15, 14, 14);
   z-index: 1000;
   display: flex;
   position: fixed;
+  top: 0;
   width: 100%;
   flex-direction: column;
   align-items: center;
+  transition: top 0.3s ease-in-out;
 }
-#heading{
+
+.hidden-header {
+  top: -12vh; /* Hides the header smoothly */
+}
+
+#heading {
   display: flex;
   align-items: center;
 }
-#logo{
+
+#logo {
   width: 40px;
 }
-.title{
+
+.title {
   color: white;
   font-family: 'cursive';
   font-size: 35px;
 }
-.navigators{
+
+.navigators {
   height: 7vh;
   background-color: rgb(15, 14, 14);
   display: flex;
@@ -50,35 +63,38 @@ header {
   transform: scale(1.05);
 }
 
+/* PAGE BODY & COMPONENTS */
 #logosection {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.matter{
+.components {
+  background: rgba(193, 212, 216, 0.55);
+  color: rgb(20, 4, 65);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14vh; /* prevents overlap with fixed header */
+  padding-bottom: 20vh;
+}
+
+.matter {
   font-size: 20px;
   display: flex;
   flex-direction: column;
   width: 80%;
 }
 
-.matter>p{
+.matter > p {
   margin: 0.5%;
 }
 
-.components{
-  background: rgba(193, 212, 216, 0.55);
-  color: rgb(20, 4, 65);
-  width:100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10vh;
-  padding-bottom: 20vh;
-}
+/* Section Styling */
 section {
-  margin-bottom: 4vh;
+  margin-bottom: 60px;
 }
 
 h1, h2 {
@@ -110,44 +126,204 @@ strong {
   color: #050505;
 }
 
-.album{
+/* Projects and Media */
+.album {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  /* height: 500px; */
+  flex-wrap: wrap;
 }
 
-.projects{
+.projects,
+.kitchen-section,
+.pantry-section,
+.tvunit-section,
+.workstation-section,
+.designs-section {
+  margin-top: 60px;
+}
+
+.projects {
   background-color: black;
   height: 300px;
-  width: 300px;  
+  width: 300px;
   margin: 10px;
 }
+
 video {
+  width: 300px;
+  height: 300px;
   z-index: 0 !important;
 }
 
-video{
-  width: 300px;
-  height:300px;
+/* Services Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  padding: 20px 0;
+  text-align: center;
 }
 
-@media (max-width: 499px) {
-  .matter{
-    font-size: 15px;
-  }
-  .matter>p{
-    margin: 2.5%;
-  }
-  .album{
-    flex-direction: column;
+.service-grid div {
+  background-color: #fff;
+  color: #0e0e0e;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  font-weight: 600;
+}
+
+.service-grid div:hover {
+  transform: scale(1.05);
+}
+
+/* Designs Page Image */
+.design-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+
+.design-image:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Page */
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Loading Spinner for Form */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #ccc;
+  border-top: 8px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
-footer{
-  text-decoration: none;
+
+/* Footer */
+footer {
   text-align: center;
   background-color: white;
   color: black;
   padding: 30px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 499px) {
+  .matter {
+    font-size: 15px;
+  }
+
+  .matter > p {
+    margin: 2.5%;
+  }
+
+  .album {
+    flex-direction: column;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .design-image {
+    width: 90%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .navfield {
+    font-size: 14px;
+    width: 25%;
+  }
 }

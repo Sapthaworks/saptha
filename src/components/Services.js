@@ -1,95 +1,90 @@
 import React from 'react';
-const About = () => {
+import { motion } from 'framer-motion';
+
+const fadeUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: 'easeOut' },
+};
+
+const Services = () => {
   return (
     <div className="components">
       <div className="matter">
 
-        {/* Hero Section */}
-        <section>
-          <h1>Crafting Spaces That Feel Like Home</h1>
+        <motion.section {...fadeUp}>
+          <h1>Transforming Spaces with Style</h1>
           <p>
-            Modular, classic, and elegant interior designs tailored to bring warmth,
-            style, and soul into every corner of your home.
+            From cozy bedrooms to functional workspaces, Saptha Interiors delivers aesthetic, comfort, and utility in every design.
           </p>
-        </section>
+        </motion.section>
 
-        {/* About Us */}
-        <section>
-          <h2>About Us</h2>
-          <p>
-            Saptha Interiors is a creative and customer-focused interior design studio,
-            blending modular innovation with classic elegance. We transform houses into warm,
-            inviting homes that reflect your personality and lifestyle.
-          </p>
-        </section>
-
-        {/* Our Services */}
-        <section>
-          <h2>Our Services</h2>
+        <motion.section {...fadeUp}>
+          <h2>Complete Interior Services</h2>
           <ul>
-            <li>Modular Kitchen & Wardrobes</li>
-            <li>Living & Bedroom Interiors</li>
-            <li>False Ceilings & Lighting</li>
-            <li>TV Units & Storage Solutions</li>
-            <li>End-to-End Custom Interior Solutions</li>
+            <li>✅ Modular Kitchens & Wardrobes</li>
+            <li>✅ Living Room Interiors</li>
+            <li>✅ Bedroom Interiors</li>
+            <li>✅ Kids Room Interiors</li>
+            <li>✅ Pooja Room & Prayer Areas</li>
+            <li>✅ TV Units & Entertainment Walls</li>
+            <li>✅ Crockery Units & Bar Units</li>
+            <li>✅ Study Tables & Home Libraries</li>
+            <li>✅ Work From Home Office Setups</li>
+            <li>✅ Office Interior Design</li>
+            <li>✅ False Ceilings & LED Lighting</li>
+            <li>✅ Accent Walls & Wall Panelling</li>
+            <li>✅ Storage & Loft Cabinets</li>
+            <li>✅ Bathroom Vanity Units</li>
+            <li>✅ Balcony Seating & Planters</li>
+            <li>✅ Dining Areas & Side Units</li>
+            <li>✅ Entry Foyers & Shoe Racks</li>
+            <li>✅ Partition Walls & Jali Panels</li>
+            <li>✅ Canvas & Wall Art Decoration</li>
+            <li>✅ 3D Design Visualization & Turnkey Solutions</li>
           </ul>
-        </section>
+        </motion.section>
 
-        {/* How We Work */}
-        <section>
-          <h2>How We Work</h2>
+        <motion.section {...fadeUp}>
+          <h2>Our Process</h2>
           <ul>
-            <li>📏 <strong>Site Measurement:</strong> Accurate measurements for a perfect fit.</li>
-            <li>🪵 <strong>Material Selection:</strong> Best wood for each area, ensuring durability and appeal.</li>
-            <li>🧠 <strong>Design & Schematics:</strong> AI + expertise = stunning functional layouts.</li>
-            <li>🎯 <strong>Tailored for You:</strong> Unique designs that match your taste and lifestyle.</li>
-            <li>💰 <strong>Transparent Quotation:</strong> Clear pricing with no hidden costs.</li>
-            <li>👷‍♂️ <strong>Skilled Workforce:</strong> Experienced carpenters delivering premium finishes.</li>
-            <li>🧰 <strong>Premium Materials:</strong> High-quality laminates, hardware, and adhesives.</li>
-            <li>⏱ <strong>On-Time Delivery:</strong> Timely handover without compromising quality.</li>
-            <li>🛠 <strong>End-to-End Service:</strong> Complete interior solutions from start to finish.</li>
-            <li>🌟 <strong>Customer Satisfaction:</strong> Loved and trusted by happy homeowners.</li>
-            <li>🎨 <strong>Style Versatility:</strong> Modular, classic, or elegant — we adapt to your vision.</li>
-            <li>🔄 <strong>Seamless Coordination:</strong> Hassle-free communication and smooth progress.</li>
-            <li>🧹 <strong>Post-Installation Support:</strong> Clean-up and aftercare for long-term perfection.</li>
+            <li>📏 <strong>Site Visit & Measurement:</strong> Perfect planning starts with precision.</li>
+            <li>🎨 <strong>Design Ideation & Moodboards:</strong> Bring your personality into every design.</li>
+            <li>🛠 <strong>Material Finalization:</strong> Premium wood, laminates, and hardware.</li>
+            <li>🧠 <strong>3D Visualization:</strong> Walk through your space before execution.</li>
+            <li>👷‍♂️ <strong>On-Site Work:</strong> Professional, clean, and timely installations.</li>
+            <li>🌟 <strong>Final Handover:</strong> Quality-checked and ready for your lifestyle.</li>
           </ul>
-        </section>
+        </motion.section>
 
-        {/* our projects */}
-        <section>
-            <h2>Our Projects</h2>
-            <div className="album">
-                <div className="projects">
-                <video src="./videos/project1.mp4" controls></video>
-                </div>
-                <div className="projects">
-                <video src="./videos/project1.mp4" controls></video>
-                </div>
-                <div className="projects">
-                <video src="./videos/project1.mp4" controls></video>
-                </div>
+        <motion.section {...fadeUp}>
+          <h2>Project Glimpses</h2>
+          <div className="album">
+            <div className="projects">
+              <video src="./videos/project1.mp4" controls></video>
             </div>
-        </section>
+            <div className="projects">
+              <video src="./videos/project1.mp4" controls></video>
+            </div>
+            <div className="projects">
+              <video src="./videos/project1.mp4" controls></video>
+            </div>
+          </div>
+        </motion.section>
 
+        <motion.section {...fadeUp}>
+          <h2>Why Saptha Interiors?</h2>
+          <p>✔ Personalized design for every lifestyle</p>
+          <p>✔ Premium materials with lasting durability</p>
+          <p>✔ Transparent pricing — no hidden charges</p>
+          <p>✔ Timely delivery with detailed execution</p>
+          <p>✔ After-service support and warranty</p>
+          <p>✔ Trusted by hundreds of happy clients</p>
+        </motion.section>
 
-        {/* Why Choose Us */}
-        <section>
-          <h2>Why Choose Us?</h2>
-          <p>We craft interiors that reflect who you are.</p>
-          <p>From elegant living rooms to cozy bedrooms,</p>
-          <p>we blend style, comfort, and functionality.</p>
-          <p>Every detail is thoughtfully designed.</p>
-          <p>Modern, minimalist, or luxurious —</p>
-          <p>your choice, our design.</p>
-          <p>Let your home tell your story.</p>
-          <p>Trusted by homeowners and businesses alike.</p>
-          <p>Explore our portfolio and get inspired.</p>
-          <p>Your perfect space is just a consultation away.</p>
-        </section>
       </div>
     </div>
   );
-  };
-  
-  export default About;
-  
+};
+
+export default Services;

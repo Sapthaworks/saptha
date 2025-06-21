@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
@@ -7,10 +7,47 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 
 function App() {
+  const [hideHeader, setHideHeader] = useState(false);
+  const lastScrollY = useRef(window.scrollY); // ✅ useRef to fix ESLint warning
+
+  // Ping server periodically to keep it awake
+  useEffect(() => {
+    const pingServer = () => {
+      fetch('https://saptha-backend.onrender.com/', {
+        method: 'GET',
+      })
+        .then(() => console.log('⏰ Server pinged to keep awake'))
+        .catch(err => console.error('❌ Ping failed', err));
+    };
+
+    pingServer();
+    const intervalId = setInterval(pingServer, 600000); // 10 min
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Hide header on scroll down, show on scroll up
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        setHideHeader(true); // Scrolling down
+      } else {
+        setHideHeader(false); // Scrolling up
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <Router>
-        <header>
+        <header className={hideHeader ? 'hidden-header' : ''}>
           <div id='heading'>
             <img id="logo" src={`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`} alt="saptha logo" />
             <div className='title'>Saptha Interiors</div>
@@ -34,19 +71,15 @@ function App() {
         </div>
       </Router>
 
-      {/* Plain Footer with Contact Card */}
       <footer>
         <div>
           <div>
-
-            {/* Left: Brand Info */}
             <div>
               <h2>Saptha Interiors</h2>
               <p>Creative Interior Design Company</p>
               <p>© {new Date().getFullYear()} Saptha Interiors. All rights reserved.</p>
             </div>
 
-            {/* Right: Contact Info */}
             <div>
               <h3>Contact Us</h3>
               <p>Email: <a href="mailto:sapthaworks@gmail.com">sapthaworks@gmail.com</a></p>
@@ -66,7 +99,6 @@ function App() {
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </footer>

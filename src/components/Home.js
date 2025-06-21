@@ -1,94 +1,134 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: 'easeOut' }
+};
+
 const Home = () => {
   return (
     <div className="components">
       <div className="matter">
 
-        {/* Hero Section */}
-        <section id='logosection'>
-          <img src={`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`} alt="saptha" /> 
-        </section>
-        <section>
-          <h1>Crafting Spaces That Feel Like Home</h1>
+        <motion.section id='logosection' {...fadeInUp}>
+          <img 
+            src="/Images/SAPTHA.ico"
+            alt="saptha" 
+            style={{ width: '250px' }} 
+          /> 
+        </motion.section>
+
+        <motion.section className="hero-section" {...fadeInUp}>
+          <h1>Beautifully Designed Interiors</h1>
+          <p>Bringing elegance and functionality to every corner of your home.</p>
+          <img 
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1470&q=80" 
+            alt="Interior Example" 
+            style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} 
+          />
+        </motion.section>
+
+        <motion.section className="about-section" {...fadeInUp}>
+          <h2>Who We Are</h2>
           <p>
-            Modular, classic, and elegant interior designs tailored to bring warmth,
-            style, and soul into every corner of your home.
+            Saptha Interiors is an interior design company that offers personalized and high-end
+            interior solutions for your home and workspace. We prioritize client vision and
+            quality execution.
           </p>
-        </section>
+          <img 
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80" 
+            alt="Modern Interior" 
+            style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} 
+          />
+        </motion.section>
 
-        {/* About Us */}
-        <section>
-          <h2>About Us</h2>
-          <p>
-            Saptha Interiors is a creative and customer-focused interior design studio,
-            blending modular innovation with classic elegance. We transform houses into warm,
-            inviting homes that reflect your personality and lifestyle.
-          </p>
-        </section>
+        <motion.section className="vision-section" {...fadeInUp}>
+          <h2>Our Mission & Future Goals</h2>
+          <p>Our mission is to seamlessly blend style, comfort, and innovation to create spaces that inspire...</p>
+          {/* Keep your long text here */}
+        </motion.section>
 
-        {/* Our Services */}
-        <section>
-          <h2>Our Services</h2>
-          <ul>
-            <li>Modular Kitchen & Wardrobes</li>
-            <li>Living & Bedroom Interiors</li>
-            <li>False Ceilings & Lighting</li>
-            <li>TV Units & Storage Solutions</li>
-            <li>End-to-End Custom Interior Solutions</li>
-          </ul>
-        </section>
+        <motion.section className="services-section" {...fadeInUp}>
+          <h2>Our Core Services</h2>
+          <div className="service-grid">
+            <div>Modular Kitchen</div>
+            <div>Wardrobe Design</div>
+            <div>Living Room Interiors</div>
+            <div>False Ceilings</div>
+            <div>Lighting Solutions</div>
+            <div>Full Home Interiors</div>
+          </div>
+        </motion.section>
 
-        {/* How We Work */}
-        <section>
-          <h2>How We Work</h2>
-          <ul>
-            <li><span>📏</span> <strong>Site Measurement:</strong> Accurate measurements for a perfect fit.</li>
-            <li><span>🪵</span> <strong>Material Selection:</strong> Best wood for each area, ensuring durability and appeal.</li>
-            <li><span>🧠</span> <strong>Design & Schematics:</strong> AI + expertise = stunning functional layouts.</li>
-            <li><span>🎯</span> <strong>Tailored for You:</strong> Unique designs that match your taste and lifestyle.</li>
-            <li><span>💰</span> <strong>Transparent Quotation:</strong> Clear pricing with no hidden costs.</li>
-            <li><span>👷‍♂️</span> <strong>Skilled Workforce:</strong> Experienced carpenters delivering premium finishes.</li>
-            <li><span>🧰</span> <strong>Premium Materials:</strong> High-quality laminates, hardware, and adhesives.</li>
-            <li><span>⏱</span> <strong>On-Time Delivery:</strong> Timely handover without compromising quality.</li>
-            <li><span>🛠</span> <strong>End-to-End Service:</strong> Complete interior solutions from start to finish.</li>
-            <li><span>🌟</span> <strong>Customer Satisfaction:</strong> Loved and trusted by happy homeowners.</li>
-            <li><span>🎨</span> <strong>Style Versatility:</strong> Modular, classic, or elegant — we adapt to your vision.</li>
-            <li><span>🔄</span> <strong>Seamless Coordination:</strong> Hassle-free communication and smooth progress.</li>
-            <li><span>🧹</span> <strong>Post-Installation Support:</strong> Clean-up and aftercare for long-term perfection.</li>
-          </ul>
-        </section>
+        {/* Extra Sections */}
+        <motion.section className="kitchen-section" {...fadeInUp}>
+          <h2>Modular Kitchens</h2>
+          <p>Our modular kitchen designs combine elegance, space optimization, and functionality...</p>
+          <img src="https://images.unsplash.com/photo-1588854337221-4f38f0748dc0?auto=format&fit=crop&w=1470&q=80" alt="Modular Kitchen" style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} />
+        </motion.section>
 
-        {/* our projects */}
-        <section>
-            <h2>Our Projects</h2>
-            <div className="album">
-                <div className="projects">
-                <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
-                </div>
-                <div className="projects">
-                <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
-                </div>
-                <div className="projects">
-                <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
-                </div>
+        <motion.section className="pantry-section" {...fadeInUp}>
+          <h2>Modern Pantry Units</h2>
+          <p>Designed for seamless storage and accessibility, our custom pantry units ensure...</p>
+          <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1470&q=80" alt="Pantry Unit" style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} />
+        </motion.section>
+
+        <motion.section className="tvunit-section" {...fadeInUp}>
+          <h2>Custom-Built TV Units</h2>
+          <p>Elevate your entertainment space with our stylish and space-efficient custom TV units...</p>
+          <img src="https://images.unsplash.com/photo-1616594195794-25234c5aa458?auto=format&fit=crop&w=1470&q=80" alt="TV Unit" style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} />
+        </motion.section>
+
+        <motion.section className="workstation-section" {...fadeInUp}>
+          <h2>Home Workstations</h2>
+          <p>Work smarter with our ergonomic and inspiring home office designs...</p>
+          <img src="https://images.unsplash.com/photo-1616628182505-7d3c2a7fa3aa?auto=format&fit=crop&w=1470&q=80" alt="Home Workstation" style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} />
+        </motion.section>
+
+        <motion.section className="process-section" {...fadeInUp}>
+          <h2>Our Design Process</h2>
+          <ol>
+            <li>Initial Consultation & Site Visit</li>
+            <li>Conceptual Design and Layout Planning</li>
+            <li>Material Finalization</li>
+            <li>Project Execution & Delivery</li>
+          </ol>
+        </motion.section>
+
+        <motion.section className="projects-section" {...fadeInUp}>
+          <h2>Recent Projects</h2>
+          <div className="album">
+            <div className="projects">
+              <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
             </div>
-        </section>
+            <div className="projects">
+              <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
+            </div>
+            <div className="projects">
+              <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
+            </div>
+          </div>
+        </motion.section>
 
+        <motion.section className="why-choose-section" {...fadeInUp}>
+          <h2>Why Choose Saptha Interiors?</h2>
+          <ul>
+            <li>Client-Centered Custom Designs</li>
+            <li>Timely Delivery and Transparent Pricing</li>
+            <li>Premium Materials and Finish</li>
+            <li>Experienced Team with Artistic Vision</li>
+            <li>Comprehensive End-to-End Service</li>
+            <li>Focus on Smart Home Integration</li>
+            <li>Commitment to Sustainability and Innovation</li>
+            <li>Tailored Automation Packages</li>
+            <li>Post-Project Support and Maintenance</li>
+            <li>Use of Advanced Design Tools & Software</li>
+            <li>Future-Ready Spaces with Modern Technologies</li>
+          </ul>
+        </motion.section>
 
-        {/* Why Choose Us */}
-        <section>
-          <h2>Why Choose Us?</h2>
-          <p>We craft interiors that reflect who you are.</p>
-          <p>From elegant living rooms to cozy bedrooms,</p>
-          <p>we blend style, comfort, and functionality.</p>
-          <p>Every detail is thoughtfully designed.</p>
-          <p>Modern, minimalist, or luxurious —</p>
-          <p>your choice, our design.</p>
-          <p>Let your home tell your story.</p>
-          <p>Trusted by homeowners and businesses alike.</p>
-          <p>Explore our portfolio and get inspired.</p>
-          <p>Your perfect space is just a consultation away.</p>
-        </section>
       </div>
     </div>
   );
