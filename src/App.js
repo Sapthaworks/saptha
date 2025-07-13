@@ -60,7 +60,7 @@ function App() {
         <ScrollToTop />
         <header className={hideHeader ? 'hidden-header' : ''}>
           <div id='heading'>
-            <img id="logo" src={`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`} alt="saptha logo" />
+            <img id="logo" src={`${process.env.PUBLIC_URL}/images/SAPTHA.ico`} alt="saptha logo" />
             <div className='title'>Saptha Interiors</div>
           </div>
 
