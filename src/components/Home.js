@@ -14,7 +14,7 @@ const Home = () => {
 
         <motion.section id='logosection' {...fadeInUp}>
           <img 
-            src="/Images/SAPTHA.ico"
+            src="/images/SAPTHA.ico"
             alt="saptha" 
             style={{ width: '250px' }} 
           /> 
@@ -66,7 +66,11 @@ const Home = () => {
         <motion.section className="kitchen-section" {...fadeInUp}>
           <h2>Modular Kitchens</h2>
           <p>Our modular kitchen designs combine elegance, space optimization, and functionality...</p>
-          <img src="https://images.unsplash.com/photo-1588854337221-4f38f0748dc0?auto=format&fit=crop&w=1470&q=80" alt="Modular Kitchen" style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} />
+          <img
+              src="/images/modular_kitchen.png"
+              alt="Modular kitchen"
+              className="design-image"
+            />
         </motion.section>
 
         <motion.section className="pantry-section" {...fadeInUp}>
@@ -101,13 +105,13 @@ const Home = () => {
           <h2>Recent Projects</h2>
           <div className="album">
             <div className="projects">
-              <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
+              <video src="/videos/project1.mp4" controls></video>
             </div>
             <div className="projects">
-              <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
+              <video src="/videos/project.mp4" controls></video>
             </div>
             <div className="projects">
-              <video src={`${process.env.PUBLIC_URL}/videos/project1.mp4`} controls></video>
+              <video src="/videos/project.mp4" controls></video>
             </div>
           </div>
         </motion.section>

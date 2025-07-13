@@ -1,14 +1,24 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Designs from './components/Designs';
 import Services from './components/Services';
 import Contact from './components/Contact';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   const [hideHeader, setHideHeader] = useState(false);
-  const lastScrollY = useRef(window.scrollY); // ✅ useRef to fix ESLint warning
+  const lastScrollY = useRef(window.scrollY);
 
   // Ping server periodically to keep it awake
   useEffect(() => {
@@ -32,9 +42,9 @@ function App() {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
-        setHideHeader(true); // Scrolling down
+        setHideHeader(true);
       } else {
-        setHideHeader(false); // Scrolling up
+        setHideHeader(false);
       }
 
       lastScrollY.current = currentScrollY;
@@ -47,6 +57,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <header className={hideHeader ? 'hidden-header' : ''}>
           <div id='heading'>
             <img id="logo" src={`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`} alt="saptha logo" />
