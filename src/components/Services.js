@@ -70,22 +70,6 @@ const Services = () => {
           </ul>
         </motion.section>
 
-        {/* Project Glimpses */}
-        <motion.section {...fadeUp}>
-          <h2>Project Glimpses</h2>
-          <div className="album">
-            <div className="projects">
-              <video src="./videos/project1.mp4" controls></video>
-            </div>
-            <div className="projects">
-              <video src="./videos/project1.mp4" controls></video>
-            </div>
-            <div className="projects">
-              <video src="./videos/project1.mp4" controls></video>
-            </div>
-          </div>
-        </motion.section>
-
         {/* Why Choose Us */}
         <motion.section {...fadeUp}>
           <h2>Why Saptha Interiors?</h2>

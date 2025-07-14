@@ -72,7 +72,7 @@ function App() {
           </div>
         </header>
 
-        <div className="components">
+        <div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/designs" element={<Designs />} />

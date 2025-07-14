@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div className="components">
       {loading && (
         <div className="loading-overlay">
           <div className="spinner"></div>
@@ -114,7 +114,7 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-    </>
+    </div>
   );
 };
 

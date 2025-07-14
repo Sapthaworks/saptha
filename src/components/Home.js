@@ -24,14 +24,9 @@ const Home = () => {
           <h1>Beautifully Designed Interiors</h1>
           <p>Bringing elegance and functionality to every corner of your home.</p>
           <img 
-            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1470&q=80" 
+            src="/images/living_room.jpg" 
             alt="Interior Example" 
-           style={
-              { width: '100%',
-                borderRadius: '10px',
-                marginTop: '20px',
-                border: '1px solid black',
-              }} 
+           className="responsive-image"
           />
         </motion.section>
 
@@ -39,18 +34,13 @@ const Home = () => {
           <h2>Who We Are</h2>
           <p>
             Saptha Interiors is an interior design company that offers personalized and high-end
-            interior solutions for your home and workspace. We prioritize client vision and
+            interior solutions <br/>for your home and workspace. We prioritize client vision and
             quality execution.
           </p>
           <img 
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80" 
+            src="/images/design_layout.jpg"  
             alt="Modern Interior" 
-            style={
-              { width: '100%',
-                borderRadius: '10px',
-                marginTop: '20px',
-                border: '1px solid black',
-              }} 
+            className="responsive-image"
           />
         </motion.section>
 
@@ -77,29 +67,20 @@ const Home = () => {
           <h2>Modular Kitchens</h2>
           <p>Our modular kitchen designs combine elegance, space optimization, and functionality...</p>
           <img
-            src="/images/modular_kitchen.png"
+            src="/images/modular_kitchen.jpg"
             alt="Modular kitchen"
-            style={
-              { width: '100%',
-                borderRadius: '10px',
-                marginTop: '20px',
-                border: '1px solid black',
-              }}  
+            className="responsive-image"
           />
         </motion.section>
 
         <motion.section className="pantry-section" {...fadeInUp}>
-          <h2>Modern Pantry Units</h2>
-          <p>Designed for seamless storage and accessibility, our custom pantry units ensure...</p>
-          <img 
-            src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1470&q=80"
-            alt="Pantry Unit" 
-            style={
-              { width: '100%',
-                borderRadius: '10px',
-                marginTop: '20px',
-                border: '1px solid black',
-              }}
+          <h2>Organized Bed Rooms</h2>
+          <p>Designed for seamless storage and accessibility, we utilize every inch,<br/>
+             including innovative beds with integrated storage solutions.</p>
+          <img
+            src="/images/bedroom.jpg"
+            alt="Pantry Unit"
+            className="responsive-image"
           />
         </motion.section>
 
@@ -107,14 +88,9 @@ const Home = () => {
           <h2>Custom-Built TV Units</h2>
           <p>Elevate your entertainment space with our stylish and space-efficient custom TV units...</p>
           <img 
-            src="/images/TV_unit.png" 
+            src="/images/TV_unit.jpg" 
             alt="TV Unit" 
-            style={
-              { width: '100%',
-                borderRadius: '10px',
-                marginTop: '20px',
-                border: '1px solid black',
-              }} 
+            className="responsive-image"
           />
         </motion.section>
 
@@ -122,14 +98,9 @@ const Home = () => {
           <h2>Home Workstations</h2>
           <p>Work smarter with our ergonomic and inspiring home office designs...</p>
           <img 
-            src="https://images.unsplash.com/photo-1616628182505-7d3c2a7fa3aa?auto=format&fit=crop&w=1470&q=80" 
+            src="/images/work_area.jpg" 
             alt="Home Workstation" 
-            style={
-              { width: '100%',
-                borderRadius: '10px',
-                marginTop: '20px',
-                border: '1px solid black',
-              }}  
+            className="responsive-image" 
           />
         </motion.section>
 
