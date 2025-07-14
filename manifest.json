@@ -1,5 +1,5 @@
 {
-    "name": "Saptha Interiors - Home & Office Interior Design Services",
+    "name": "Saptha Interiors - We make your dream home",
     "short_name": "Saptha",
     "description": "Saptha Interiors is a professional interior design company specializing in modern home and office interiors.",
     "start_url": "/",
@@ -7,17 +7,17 @@
     "lang": "en-US",
     "icons": [
       {
-        "src": "{`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`}",
+        "src": "{`${process.env.PUBLIC_URL}/images/SAPTHA.ico`}",
         "type": "image/ico",
         "sizes": "192x192"
       },
       {
-        "src": "{`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`}",
+        "src": "{`${process.env.PUBLIC_URL}/images/SAPTHA.ico`}",
         "type": "image/ico",
         "sizes": "48x48"
       },
       {
-        "src": "{`${process.env.PUBLIC_URL}/Images/SAPTHA.ico`}",
+        "src": "{`${process.env.PUBLIC_URL}/images/SAPTHA.ico`}",
         "type": "image/ico",
         "sizes": "512x512"
       }
