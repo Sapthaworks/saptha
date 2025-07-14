@@ -26,7 +26,12 @@ const Home = () => {
           <img 
             src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1470&q=80" 
             alt="Interior Example" 
-            style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} 
+           style={
+              { width: '70%',
+                borderRadius: '10px',
+                marginTop: '20px',
+                border: '1px solid black',
+              }} 
           />
         </motion.section>
 
@@ -40,7 +45,12 @@ const Home = () => {
           <img 
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80" 
             alt="Modern Interior" 
-            style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} 
+            style={
+              { width: '70%',
+                borderRadius: '10px',
+                marginTop: '20px',
+                border: '1px solid black',
+              }} 
           />
         </motion.section>
 
@@ -67,28 +77,60 @@ const Home = () => {
           <h2>Modular Kitchens</h2>
           <p>Our modular kitchen designs combine elegance, space optimization, and functionality...</p>
           <img
-              src="/images/modular_kitchen.png"
-              alt="Modular kitchen"
-              className="design-image"
-            />
+            src="/images/modular_kitchen.png"
+            alt="Modular kitchen"
+            style={
+              { width: '70%',
+                borderRadius: '10px',
+                marginTop: '20px',
+                border: '1px solid black',
+              }}  
+          />
         </motion.section>
 
         <motion.section className="pantry-section" {...fadeInUp}>
           <h2>Modern Pantry Units</h2>
           <p>Designed for seamless storage and accessibility, our custom pantry units ensure...</p>
-          <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1470&q=80" alt="Pantry Unit" style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} />
+          <img 
+            src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1470&q=80"
+            alt="Pantry Unit" 
+            style={
+              { width: '70%',
+                borderRadius: '10px',
+                marginTop: '20px',
+                border: '1px solid black',
+              }}
+          />
         </motion.section>
 
         <motion.section className="tvunit-section" {...fadeInUp}>
           <h2>Custom-Built TV Units</h2>
           <p>Elevate your entertainment space with our stylish and space-efficient custom TV units...</p>
-          <img src="https://images.unsplash.com/photo-1616594195794-25234c5aa458?auto=format&fit=crop&w=1470&q=80" alt="TV Unit" style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} />
+          <img 
+            src="/images/TV_unit.png" 
+            alt="TV Unit" 
+            style={
+              { width: '70%',
+                borderRadius: '10px',
+                marginTop: '20px',
+                border: '1px solid black',
+              }} 
+          />
         </motion.section>
 
         <motion.section className="workstation-section" {...fadeInUp}>
           <h2>Home Workstations</h2>
           <p>Work smarter with our ergonomic and inspiring home office designs...</p>
-          <img src="https://images.unsplash.com/photo-1616628182505-7d3c2a7fa3aa?auto=format&fit=crop&w=1470&q=80" alt="Home Workstation" style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }} />
+          <img 
+            src="https://images.unsplash.com/photo-1616628182505-7d3c2a7fa3aa?auto=format&fit=crop&w=1470&q=80" 
+            alt="Home Workstation" 
+            style={
+              { width: '70%',
+                borderRadius: '10px',
+                marginTop: '20px',
+                border: '1px solid black',
+              }}  
+          />
         </motion.section>
 
         <motion.section className="process-section" {...fadeInUp}>
