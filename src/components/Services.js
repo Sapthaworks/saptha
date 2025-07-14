@@ -12,6 +12,7 @@ const Services = () => {
     <div className="components">
       <div className="matter">
 
+        {/* Intro Section */}
         <motion.section {...fadeUp}>
           <h1>Transforming Spaces with Style</h1>
           <p>
@@ -19,6 +20,7 @@ const Services = () => {
           </p>
         </motion.section>
 
+        {/* Interior Design Services */}
         <motion.section {...fadeUp}>
           <h2>Complete Interior Services</h2>
           <ul>
@@ -45,6 +47,17 @@ const Services = () => {
           </ul>
         </motion.section>
 
+        {/* New Vertical Services */}
+        <motion.section {...fadeUp}>
+          <h2>Other Services</h2>
+          <ul>
+            <li>📣 <strong>Digital Marketing:</strong> Specialized campaigns for Real Estate & Home Automation brands.</li>
+            <li>🏠 <strong>Home Automation:</strong> Smart living with voice control, security, and energy efficiency.</li>
+            <li>👨‍💻 <strong>IT Recruiting:</strong> End-to-end tech hiring services for startups and enterprises.</li>
+          </ul>
+        </motion.section>
+
+        {/* Our Process */}
         <motion.section {...fadeUp}>
           <h2>Our Process</h2>
           <ul>
@@ -57,6 +70,7 @@ const Services = () => {
           </ul>
         </motion.section>
 
+        {/* Project Glimpses */}
         <motion.section {...fadeUp}>
           <h2>Project Glimpses</h2>
           <div className="album">
@@ -72,6 +86,7 @@ const Services = () => {
           </div>
         </motion.section>
 
+        {/* Why Choose Us */}
         <motion.section {...fadeUp}>
           <h2>Why Saptha Interiors?</h2>
           <p>✔ Personalized design for every lifestyle</p>

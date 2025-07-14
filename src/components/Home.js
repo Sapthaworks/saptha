@@ -107,12 +107,6 @@ const Home = () => {
             <div className="projects">
               <video src="/videos/project1.mp4" controls></video>
             </div>
-            <div className="projects">
-              <video src="/videos/project.mp4" controls></video>
-            </div>
-            <div className="projects">
-              <video src="/videos/project.mp4" controls></video>
-            </div>
           </div>
         </motion.section>
 
