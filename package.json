@@ -2,7 +2,26 @@
   "name": "saptha_react",
   "version": "0.1.0",
   "private": true,
+  "description": "",
   "homepage": "https://sapthaworks.github.io/saptha/",
+  "bugs": {
+    "url": "https://github.com/Sapthaworks/saptha/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sapthaworks/saptha.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -15,13 +34,14 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "sourceType": "unambiguous"
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +61,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
+  "allowScripts": {
+    "core-js@3.51.0": true,
+    "core-js-pure@3.51.0": true
   }
 }
