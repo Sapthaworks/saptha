@@ -8,6 +8,8 @@ const fadeUp = {
 };
 
 const Designs = () => {
+  const publicUrl = process.env.PUBLIC_URL || '';
+
   return (
     <div className="components">
       <div className="matter">
@@ -65,7 +67,7 @@ const Designs = () => {
               className="design-image"
             />
             <img
-              src="/images/design_layout2.avif"
+              src={`${publicUrl}/images/design_layout2.avif`}
               alt="Design layout sketch"
               className="design-image"
             />
@@ -84,7 +86,7 @@ const Designs = () => {
               className="design-image"
             />
             <img
-              src="/images/digital_layout.avif"
+              src={`${publicUrl}/images/digital_layout.avif`}
               alt="Digital layout example"
               className="design-image"
             />
@@ -96,7 +98,7 @@ const Designs = () => {
           <p>Our modular solutions are tailored for functionality, space-saving, and modern aesthetics.</p>
           <div className="album">
             <img
-              src="/images/modular_kitchen.png"
+              src={`${publicUrl}/images/modular_kitchen.png`}
               alt="Modular kitchen"
               className="design-image"
             />

@@ -8,13 +8,15 @@ const fadeInUp = {
 };
 
 const Home = () => {
+  const publicUrl = process.env.PUBLIC_URL || '';
+
   return (
     <div className="components">
       <div className="matter">
 
         <motion.section id='logosection' {...fadeInUp}>
           <img 
-            src="/images/SAPTHA.ico"
+            src={`${publicUrl}/images/SAPTHA.ico`}
             alt="saptha" 
             style={{ width: '250px' }} 
           /> 
@@ -24,9 +26,9 @@ const Home = () => {
           <h1>Beautifully Designed Interiors</h1>
           <p>Bringing elegance and functionality to every corner of your home.</p>
           <img 
-            src="/images/living_room.jpg" 
+            src={`${publicUrl}/images/living_room.jpg`} 
             alt="Interior Example" 
-           className="responsive-image"
+            className="responsive-image"
           />
         </motion.section>
 
@@ -38,7 +40,7 @@ const Home = () => {
             quality execution.
           </p>
           <img 
-            src="/images/design_layout.jpg"  
+            src={`${publicUrl}/images/design_layout.jpg`}  
             alt="Modern Interior" 
             className="responsive-image"
           />
@@ -47,7 +49,6 @@ const Home = () => {
         <motion.section className="vision-section" {...fadeInUp}>
           <h2>Our Mission & Future Goals</h2>
           <p>Our mission is to seamlessly blend style, comfort, and innovation to create spaces that inspire...</p>
-          {/* Keep your long text here */}
         </motion.section>
 
         <motion.section className="services-section" {...fadeInUp}>
@@ -67,7 +68,7 @@ const Home = () => {
           <h2>Modular Kitchens</h2>
           <p>Our modular kitchen designs combine elegance, space optimization, and functionality...</p>
           <img
-            src="/images/modular_kitchen.jpg"
+            src={`${publicUrl}/images/modular_kitchen.jpg`}
             alt="Modular kitchen"
             className="responsive-image"
           />
@@ -78,8 +79,8 @@ const Home = () => {
           <p>Designed for seamless storage and accessibility, we utilize every inch,<br/>
              including innovative beds with integrated storage solutions.</p>
           <img
-            src="/images/bedroom.jpg"
-            alt="Pantry Unit"
+            src={`${publicUrl}/images/bedroom.jpg`}
+            alt="Bed Room"
             className="responsive-image"
           />
         </motion.section>
@@ -88,7 +89,7 @@ const Home = () => {
           <h2>Custom-Built TV Units</h2>
           <p>Elevate your entertainment space with our stylish and space-efficient custom TV units...</p>
           <img 
-            src="/images/TV_unit.jpg" 
+            src={`${publicUrl}/images/TV_unit.jpg`} 
             alt="TV Unit" 
             className="responsive-image"
           />
@@ -98,7 +99,7 @@ const Home = () => {
           <h2>Home Workstations</h2>
           <p>Work smarter with our ergonomic and inspiring home office designs...</p>
           <img 
-            src="/images/work_area.jpg" 
+            src={`${publicUrl}/images/work_area.jpg`} 
             alt="Home Workstation" 
             className="responsive-image" 
           />
@@ -118,7 +119,7 @@ const Home = () => {
           <h2>Recent Projects</h2>
           <div className="album">
             <div className="projects">
-              <video src="/videos/project1.mp4" controls></video>
+              <video src={`${publicUrl}/videos/project1.mp4`} controls></video>
             </div>
           </div>
         </motion.section>

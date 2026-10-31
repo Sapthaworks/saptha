@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const popup = {
-  initial: { opacity: 0, scale: 0.8 },
+  initial: { opacity: 0, scale: 0.9 },
   animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.5, ease: 'easeOut' }
+  transition: { duration: 0.4, ease: 'easeOut' }
 };
 
 const Contact = () => {
@@ -16,17 +16,20 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
+    if (status.message) setStatus({ type: '', message: '' });
+    setFormData((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setStatus({ type: '', message: '' });
 
     try {
       const response = await fetch('https://saptha-backend.onrender.com/messages', {
@@ -37,16 +40,26 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      const result = await response.json().catch(() => null);
+
       if (response.ok) {
+        setStatus({
+          type: 'success',
+          message: 'Thank you! Your message has been sent successfully.'
+        });
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        alert('❌ Failed to send message. Please try again.');
-        console.error(result);
+        setStatus({
+          type: 'error',
+          message: (result && result.message) || 'Failed to send message. Please try again.'
+        });
       }
     } catch (error) {
-      alert('❌ Server error. Please try again later.');
-      console.error(error);
+      console.error('Contact submission error:', error);
+      setStatus({
+        type: 'error',
+        message: 'Unable to reach the server. Please check your connection and try again.'
+      });
     } finally {
       setLoading(false);
     }
@@ -65,6 +78,16 @@ const Contact = () => {
         {...popup}
       >
         <h2>Contact Us</h2>
+        <p className="contact-subtitle">
+          Have questions or want to collaborate on your next space? Send us a message.
+        </p>
+
+        {status.message && (
+          <div className={`status-banner ${status.type}`}>
+            {status.message}
+          </div>
+        )}
+
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
@@ -72,43 +95,58 @@ const Contact = () => {
               type="text"
               id="name"
               name="name"
+              autoComplete="name"
+              placeholder="Your full name"
               value={formData.name}
               onChange={handleChange}
+              disabled={loading}
               required
             />
           </div>
+
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
               name="email"
+              autoComplete="email"
+              placeholder="you@example.com"
               value={formData.email}
               onChange={handleChange}
+              disabled={loading}
               required
             />
           </div>
+
           <div className="form-group">
             <label htmlFor="subject">Subject</label>
             <input
               type="text"
               id="subject"
               name="subject"
+              placeholder="e.g. Interior Consultation / Quotation"
               value={formData.subject}
               onChange={handleChange}
+              disabled={loading}
               required
             />
           </div>
+
           <div className="form-group">
             <label htmlFor="message">Message</label>
             <textarea
               id="message"
               name="message"
+              rows="5"
+              placeholder="Tell us about your project requirements..."
               value={formData.message}
               onChange={handleChange}
+              disabled={loading}
               required
             />
           </div>
+
           <button type="submit" className="submit-btn" disabled={loading}>
             {loading ? 'Sending...' : 'Send Message'}
           </button>
